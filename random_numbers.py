@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-#5#
-#a)Random numbers
+#5
+#a)Random numbers uniform 
 
 def uniform_deviate(number, lower, upper):
     n = np.random.uniform(lower, upper, number)
@@ -12,7 +12,7 @@ def uniform_deviate(number, lower, upper):
 
 uniform_deviate(6,1, 46)
 
-#b#
+#b)Transformation of rv
 def pdf_deviate(number, lower, upper):
     x = uniform_deviate(number, lower, upper)
     y = np.arccos(1-2*x)
@@ -25,7 +25,7 @@ def pdf_deviate(number, lower, upper):
     
 #pdf_deviate(100000, 0, 1)
 
-#c#
+#c)
 #pick sin(x) as comparison function
 
 samples = list()
@@ -46,7 +46,6 @@ def rejection_method(number, lower, upper):
         samples.append(x)
         return samples
     
-    
-    
-#samples=rejection_method(10000, 0, np.pi)
-#print(samples)
+#if __name__ == "__main__":
+#   samples=rejection_method(10000, 0, np.pi)
+#   print(samples)
