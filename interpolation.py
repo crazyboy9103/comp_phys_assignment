@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from LU import LU_Dec
 from LU import matrix_eqn_solver
 #############3########################
-#a#
+#a)
 
 #use of linear interpolation
 #x represents independent variable, y dependent variable
@@ -28,14 +28,11 @@ def linear_inter(x,y):
         else:
             continue
             
-    #print('beta', beta)
-    
-    #print('alpha', alpha)
     inter_function = [x_inter, y_inter]
                 
     return inter_function
-#%%
-#b#
+
+#b)
 class cubic_spline():
     def __init__(self, x, y):
         self.__x = x
@@ -56,7 +53,7 @@ class cubic_spline():
     
     def matrix_eqn_setup(self):
         N = np.shape(self.__x)[0]
-        #for N points, there are N-1 intervals, or equivalently, each coefficients
+        #for N points, there are N-1 intervals, or equivalently, coefficients
         A = np.zeros((N-1,N-1))
         F = np.zeros((N-1,N-1))
         
